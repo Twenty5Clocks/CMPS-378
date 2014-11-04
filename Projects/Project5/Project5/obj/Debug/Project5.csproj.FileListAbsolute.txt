@@ -1,1 +1,6 @@
 C:\Users\jeremyd\Desktop\LaVerne\git378\CMPS-378\Projects\Project5\Project5\bin\Debug\Project5.exe.config
+C:\Users\jeremyd\Desktop\LaVerne\git378\CMPS-378\Projects\Project5\Project5\obj\Debug\Project5.csprojResolveAssemblyReference.cache
+C:\Users\jeremyd\Desktop\LaVerne\git378\CMPS-378\Projects\Project5\Project5\bin\Debug\Project5.exe
+C:\Users\jeremyd\Desktop\LaVerne\git378\CMPS-378\Projects\Project5\Project5\bin\Debug\Project5.pdb
+C:\Users\jeremyd\Desktop\LaVerne\git378\CMPS-378\Projects\Project5\Project5\obj\Debug\Project5.exe
+C:\Users\jeremyd\Desktop\LaVerne\git378\CMPS-378\Projects\Project5\Project5\obj\Debug\Project5.pdb

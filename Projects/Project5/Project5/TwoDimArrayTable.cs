@@ -3,23 +3,20 @@
 * Class: CPMS 378,
 * Assignment #: 5, Two Dimension Array 
 * Date Due: 11-04-14
-* Problem Description (Explains the purpose and the design of your program. It can include
-     discussion the method used to solve the problem.) 
- * To find the minimum, maximum, and the sum of
-*  three integers input by the user. The user is asked to enter three
-*  integers. The maximum, the minimum, and the sum of the numbers are
-*  calculated. The results are displayed to the user.
+* Problem Description 
+ * Working with 2 dimensional arrays for the first time
+*  User inputs how many rows and columns to use for the array
+*  The users than inputs the desired values for the array they just created
+*  The program then prints out a table of the array with the total sum and sum of each row and column
 *  Type	Variable	Description	
 *Input:
-        int num1,       // declare first number
-            num2,       // declare second number
-            num3,       // declare third number			
+        int rows,       // number of rows in array
+            columns,    // number of columns in array
+            array[,],   // value inputted by user to be placed in array			
 *Output:
-int 	sum,        // declare sum of numbers
-            average,    // declare average of numbers
-            product,    // declare product of numbers
-            smallest,   // declare smallest of numbers
-            largest;    // declare largest of numbers
+int 	    rowTotal,   // total value of the integers in the row
+            columnTotal,// total value of the integers in the column
+            arrayTotal, // total calue of all integers in array
 ******************************************************************/
 
 using System;
@@ -32,8 +29,49 @@ namespace Project5
 {
     class TwoDimArrayTable
     {
-        static void Main(string[] args)
+        //prints the rows and sums of the rows of an array
+        public void printArrayRows(int[,] array, uint r, uint c)
         {
-        }
-    }
-}
+            int rowTotal;
+            for (int i = 0; i < r; i++)
+            {
+                rowTotal = 0;
+                Console.Write("Row {0}     ", i);
+                for (int j = 0; j < c; j++)
+                {
+                    rowTotal += array[i, j];
+                    Console.Write("{0}\t", array[i, j]);
+                }
+                Console.Write("{0}", rowTotal);
+                Console.WriteLine();
+            }
+        }//end printArrayRows
+
+        //prints the totals for the columns of an array
+        public void printColumnTotal(int[,] array, uint r, uint c)
+        {
+            int columnTotal;
+            for (int j = 0; j < c; j++)
+            {
+                columnTotal = 0;
+                for (int i = 0; i < r; i++)
+                {
+                    columnTotal += array[i, j];
+
+                }
+                Console.Write("{0}\t", columnTotal);
+            }
+        }//end printColumnTotal
+
+        //returns the sum of all elements of an array
+        public int arrayTotal(int[,] array)
+        {
+            int arrayTotal = 0;
+            foreach (int digit in array)
+            {
+                arrayTotal += digit;
+            }
+            return arrayTotal;
+        }//end arrayTotal
+    }// class endTwoDimArrayTable
+}// end namespace Project 5
